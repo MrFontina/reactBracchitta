@@ -1,15 +1,20 @@
-// import React, {useState} from 'react'
-import React from "react"
-import "../Button1/Button1"
+import React, {useState} from "react"
 import Button1 from "../Button1/Button1"
 
 
 function Item(props) {
-  // const []
+  const [isFavorite, setIsFavorite] = useState(false)
+
+  function handleFavorite() {
+    setIsFavorite(!isFavorite);
+  }
+
+  let classButtonFavorite = 
+    isFavorite === true ? "card-favicon favorite" : "card-favicon";
 
   return (
     <div className='card'>
-        <button className='card-favicon'>♥</button>
+        <button onClick={handleFavorite} className={classButtonFavorite}>♥</button>
         <div className='card-details'>
             <img src={props.img} alt="producto imagen" />
         </div>
@@ -18,7 +23,7 @@ function Item(props) {
             <p>{props.detail}</p>
             <h4>${props.price}</h4>
         </div>
-      <Button1>FUNCA?</Button1>
+      <Button1>Ver más!</Button1>
     </div>
   )
 }

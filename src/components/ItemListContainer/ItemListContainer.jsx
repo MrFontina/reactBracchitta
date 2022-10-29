@@ -1,23 +1,23 @@
-import React from 'react'
-import products from "../../data/products"
-import "../Item/Item"
-import Item from '../Item/Item'
+import React, {useState, useEffect} from 'react'
+import ItemList from './ItemList'
+import getItemsFromApi from '../../mockService/mockService'
 
-function ItemListContainer(props) {
+function ItemListContainer() {
+    let [productsList, setProductsList] = useState([])
+
+    useEffect(
+        ()=>{
+            getItemsFromApi().then(
+                (itemsDataBase) => {
+                    setProductsList(itemsDataBase);
+                }        
+            )
+        }, []
+    )
 
     return (
         <div>
-
-            {products.map((product) => (<Item
-                key={product.id}
-                title={product.title}
-                detail={product.description}
-                price={product.price}
-                img={product.thumbnail}
-                stock={product.stock}
-
-            />)
-            )}
+            <ItemList productsList={productsList} />
         </div>
 
 
