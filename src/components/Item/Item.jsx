@@ -1,6 +1,6 @@
 // import React, {useState} from 'react'
 import React from "react"
-// import "../Button/Button"
+
 
 function Item(props) {
   // const []
@@ -16,7 +16,7 @@ function Item(props) {
             <p>{props.detail}</p>
             <h4>${props.price}</h4>
         </div>
-        {/* <Button/> */}
+        
     </div>
   )
 }
