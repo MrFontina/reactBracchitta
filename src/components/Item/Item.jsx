@@ -1,5 +1,7 @@
 // import React, {useState} from 'react'
 import React from "react"
+import "../Button1/Button1"
+import Button1 from "../Button1/Button1"
 
 
 function Item(props) {
@@ -16,7 +18,7 @@ function Item(props) {
             <p>{props.detail}</p>
             <h4>${props.price}</h4>
         </div>
-        
+      <Button1>FUNCA?</Button1>
     </div>
   )
 }
