@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import "./item.css"
 
 
-function Item(props) {
+function Item(product) {
   const [isFavorite, setIsFavorite] = useState(false)
 
   function handleFavorite() {
@@ -14,18 +14,20 @@ function Item(props) {
   let classButtonFavorite = 
     isFavorite === true ? "card-favicon favorite" : "card-favicon";
 
+  let urlDetail = `/detalle/${product.id}`
+
   return (
     <div className='card'>
         <button onClick={handleFavorite} className={classButtonFavorite}>♥</button>
         <div className='card-details'>
-            <img src={props.img} alt="producto imagen" />
+            <img src={product.img} alt="producto imagen" />
         </div>
         <div className="card-detail">
-            <h2>{props.title}</h2>
-            <p>{props.detail}</p>
-            <h4>${props.price}</h4>
+            <h2>{product.title}</h2>
+            <p>{product.detail}</p>
+            <h4>${product.price}</h4>
         </div>
-        <Link to="/detalle"><Button1>Ver más!</Button1>
+        <Link to={urlDetail}><Button1>Ver más!</Button1>
         </Link>
       
     </div>

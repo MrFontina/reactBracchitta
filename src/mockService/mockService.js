@@ -273,10 +273,19 @@ export default function getItemsFromApi() {
 
 
 
-    export function getSingleItemFromApi() {
+    export function getSingleItemFromApi(idParams) {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
-                resolve(itemsDataBase[4]);
+                let itemRequested = itemsDataBase.find(
+                    (item) => item.id === Number(idParams)
+                );
+                if (itemRequested) {
+                    resolve(itemRequested);
+                }
+                else{
+                    reject (new Error ("El item no existe"))
+                };
+                
             }, 2000);
         });
         }

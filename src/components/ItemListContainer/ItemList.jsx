@@ -12,6 +12,7 @@ function ItemList(props) {
 
         <Item
           key={product.id}
+          id={product.id}
           title={product.title}
           detail={product.description}
           price={product.price}
