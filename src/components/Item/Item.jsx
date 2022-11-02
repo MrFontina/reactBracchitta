@@ -1,5 +1,6 @@
 import React, {useState} from "react"
 import Button1 from "../Button1/Button1"
+import "./item.css"
 
 
 function Item(props) {
