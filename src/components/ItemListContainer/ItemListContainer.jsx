@@ -30,14 +30,8 @@ function ItemListContainer() {
         }, [categoryid]
     )
 
-    return (
-        <div>
-            <ItemList productsList={productsList} />
-        </div>
-
-
-
-    )
+    return  <ItemList productsList={productsList} />
+       
 }
 
 export default ItemListContainer

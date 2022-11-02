@@ -1,15 +1,11 @@
-import Item from "../Item/Item"
-
-
-
-
 import React from 'react'
+import FlexContainer from "../FlexContainer/FlexContainer"
+import Item from "../Item/Item"
 
 function ItemList(props) {
   return (
-    <div>
+    <FlexContainer>
       {props.productsList.map((product) => (
-
         <Item
           key={product.id}
           id={product.id}
@@ -17,13 +13,11 @@ function ItemList(props) {
           detail={product.description}
           price={product.price}
           img={product.thumbnail}
-          stock={product.stock}
-          
+          stock={product.stock}         
         />
       ))}
-      
-    </div>
-  )
+    </FlexContainer>
+  );
 }
 
 export default ItemList
