@@ -1,5 +1,6 @@
 import React, {useState} from "react"
 import Button1 from "../Button1/Button1"
+import { Link } from "react-router-dom"
 import "./item.css"
 
 
@@ -24,7 +25,9 @@ function Item(props) {
             <p>{props.detail}</p>
             <h4>${props.price}</h4>
         </div>
-      <Button1>Ver más!</Button1>
+        <Link to="/detalle"><Button1>Ver más!</Button1>
+        </Link>
+      
     </div>
   )
 }
