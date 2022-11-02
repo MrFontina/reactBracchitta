@@ -1,31 +1,43 @@
 // SIMULACION DE BACKEND
 
+
 const itemsDataBase = [{
     id: 1,
-    title: "iPhone 9",
+    title: "SX JazzBass",
     price: 649,
     stock: 54,
-    category: "smartphones",
-    thumbnail: "https://dummyjson.com/image/i/products/1/thumbnail.jpg",
-    description: "An apple mobile which is nothing like apple",
+    category: "cuerdas",
+    thumbnail: "https://todomusica.com.ar/25121-thickbox_default/bd1-3ts.jpg",
+    description: "Bajo eléctrico, modelo JazzBass",
 },
+
+{
+    id: 3,
+    title: "SX Precission",
+    price: 649,
+    stock: 54,
+    category: "cuerdas",
+    thumbnail: "https://todomusica.com.ar/26051-thickbox_default/bd2-eb.jpg",
+    description: "Bajo eléctrico, modelo Precission",
+},
+
 {
     id: 2,
-    title: "iPhone X",
-    description: "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+    title: "SX Stratocaster",
+    description: "Guitarra eléctrica, modelo Stratocaster",
     price: 899,
     stock: 34,
-    category: "smartphones",
-    thumbnail: "https://dummyjson.com/image/i/products/2/thumbnail.jpg",
+    category: "cuerdas",
+    thumbnail: "https://todomusica.com.ar/25150-thickbox_default/sst62-car.jpg",
 },
 {
     id: 4,
-    title: "OPPOF19",
-    description: "OPPO F19 is officially announced on April 2021.",
+    title: "SX Les Paul",
+    description: "Guitarra eléctrica, modelo Les Paul",
     price: 280,
     stock: 123,
-    category: "smartphones",
-    thumbnail: "https://dummyjson.com/image/i/products/4/thumbnail.jpg",
+    category: "cuerdas",
+    thumbnail: "https://todomusica.com.ar/25881-thickbox_default/ee3s.jpg",
 },
 {
     id: 5,
@@ -33,7 +45,7 @@ const itemsDataBase = [{
     description: "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
     price: 499,
     stock: 32,
-    category: "smartphones",
+    category: "cuerdas",
     thumbnail: "https://dummyjson.com/image/i/products/5/thumbnail.jpg",
 },
 {
@@ -42,7 +54,7 @@ const itemsDataBase = [{
     description: "MacBook Pro 2021 with mini-LED display may launch between September, November",
     price: 1749,
     stock: 83,
-    category: "laptops",
+    category: "percusion",
     thumbnail: "https://dummyjson.com/image/i/products/6/thumbnail.png",
 },
 {
@@ -51,7 +63,7 @@ const itemsDataBase = [{
     description: "Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched",
     price: 1499,
     stock: 50,
-    category: "laptops",
+    category: "percusion",
     thumbnail: "https://dummyjson.com/image/i/products/7/thumbnail.jpg",
 },
 {
@@ -60,7 +72,7 @@ const itemsDataBase = [{
     description: "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
     price: 1499,
     stock: 68,
-    category: "laptops",
+    category: "percusion",
     thumbnail: "https://dummyjson.com/image/i/products/8/thumbnail.jpg",
 },
 {
@@ -69,7 +81,7 @@ const itemsDataBase = [{
     description: "Infinix Inbook X1 Ci3 10th 8GB 256GB 14 Win10 Grey – 1 Year Warranty",
     price: 1099,
     stock: 96,
-    category: "laptops",
+    category: "percusion",
     thumbnail: "https://dummyjson.com/image/i/products/9/thumbnail.jpg",
 },
 {
@@ -78,7 +90,7 @@ const itemsDataBase = [{
     description: "HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10",
     price: 1099,
     stock: 89,
-    category: "laptops",
+    category: "percusion",
     thumbnail: "https://dummyjson.com/image/i/products/10/thumbnail.jpeg",
 },
 {
@@ -87,7 +99,7 @@ const itemsDataBase = [{
     description: "Mega Discount, Impression of Acqua Di Gio by GiorgioArmani concentrated attar perfume Oil",
     price: 13,
     stock: 65,
-    category: "fragrances",
+    category: "teclados",
     thumbnail: "https://dummyjson.com/image/i/products/11/thumbnail.jpg",
 },
 {
@@ -96,7 +108,7 @@ const itemsDataBase = [{
     description: "Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
     price: 40,
     stock: 52,
-    category: "fragrances",
+    category: "teclados",
     thumbnail: "https://dummyjson.com/image/i/products/12/thumbnail.jpg",
 },
 {
@@ -105,7 +117,7 @@ const itemsDataBase = [{
     description: "Product details of Best Fog Scent Xpressio Perfume 100ml For Men cool long lasting perfumes for Men",
     price: 13,
     stock: 61,
-    category: "fragrances",
+    category: "teclados",
     thumbnail: "https://dummyjson.com/image/i/products/13/thumbnail.webp",
 },
 {
@@ -114,7 +126,7 @@ const itemsDataBase = [{
     description: "Original Al Munakh® by Mahal Al Musk | Our Impression of Climate | 6ml Non-Alcoholic Concentrated Perfume Oil",
     price: 120,
     stock: 114,
-    category: "fragrances",
+    category: "teclados",
     thumbnail: "https://dummyjson.com/image/i/products/14/thumbnail.jpg",
 },
 {
@@ -123,7 +135,7 @@ const itemsDataBase = [{
     description: "Genuine  Al-Rehab spray perfume from UAE/Saudi Arabia/Yemen High Quality",
     price: 30,
     stock: 105,
-    category: "fragrances",
+    category: "teclados",
     thumbnail: "https://dummyjson.com/image/i/products/15/thumbnail.jpg",
 },
 {
@@ -132,7 +144,7 @@ const itemsDataBase = [{
     description: "L'OrÃ©al Paris introduces Hyaluron Expert Replumping Serum formulated with 1.5% Hyaluronic Acid",
     price: 19,
     stock: 110,
-    category: "skincare",
+    category: "amplificacion",
     thumbnail: "https://dummyjson.com/image/i/products/16/thumbnail.jpg",
 },
 {
@@ -141,7 +153,7 @@ const itemsDataBase = [{
     description: "Tea tree oil contains a number of compounds, including terpinen-4-ol, that have been shown to kill certain bacteria,",
     price: 12,
     stock: 78,
-    category: "skincare",
+    category: "amplificacion",
     thumbnail: "https://dummyjson.com/image/i/products/17/thumbnail.jpg",
 },
 {
@@ -150,7 +162,7 @@ const itemsDataBase = [{
     description: "Dermive Oil Free Moisturizer with SPF 20 is specifically formulated with ceramides, hyaluronic acid & sunscreen.",
     price: 40,
     stock: 88,
-    category: "skincare",
+    category: "amplificacion",
     thumbnail: "https://dummyjson.com/image/i/products/18/thumbnail.jpg",
 },
 {
@@ -159,7 +171,7 @@ const itemsDataBase = [{
     description: "Product name: rorec collagen hyaluronic acid white face serum riceNet weight: 15 m",
     price: 46,
     stock: 54,
-    category: "skincare",
+    category: "amplificacion",
     thumbnail: "https://dummyjson.com/image/i/products/19/thumbnail.jpg",
 },
 {
@@ -168,7 +180,7 @@ const itemsDataBase = [{
     description: "Fair & Clear is Pakistan's only pure Freckle cream which helpsfade Freckles, Darkspots and pigments. Mercury level is 0%, so there are no side effects.",
     price: 70,
     stock: 140,
-    category: "skincare",
+    category: "amplificacion",
     thumbnail: "https://dummyjson.com/image/i/products/20/thumbnail.jpg",
 },
 {
@@ -177,7 +189,7 @@ const itemsDataBase = [{
     description: "Fine quality Branded Product Keep in a cool and dry place",
     price: 20,
     stock: 133,
-    category: "groceries",
+    category: "efectos",
     thumbnail: "https://dummyjson.com/image/i/products/21/thumbnail.png",
 },
 {
@@ -186,7 +198,7 @@ const itemsDataBase = [{
     description: "Product details of Bake Parlor Big Elbow Macaroni - 400 gm",
     price: 14,
     stock: 146,
-    category: "groceries",
+    category: "efectos",
     thumbnail: "https://dummyjson.com/image/i/products/22/thumbnail.jpg",
 },
 {
@@ -195,7 +207,7 @@ const itemsDataBase = [{
     description: "Specifications of Orange Essence Food Flavour For Cakes and Baking Food Item",
     price: 14,
     stock: 26,
-    category: "groceries",
+    category: "efectos",
     thumbnail: "https://dummyjson.com/image/i/products/23/thumbnail.jpg",
 },
 {
@@ -204,7 +216,7 @@ const itemsDataBase = [{
     description: "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
     price: 46,
     stock: 113,
-    category: "groceries",
+    category: "efectos",
     thumbnail: "https://dummyjson.com/image/i/products/24/thumbnail.jpg",
 },
 {
@@ -213,7 +225,7 @@ const itemsDataBase = [{
     description: "Dry Rose Flower Powder Gulab Powder 50 Gram • Treats Wounds",
     price: 70,
     stock: 47,
-    category: "groceries",
+    category: "efectos",
     thumbnail: "https://dummyjson.com/image/i/products/25/thumbnail.jpg",
 },
 {
@@ -222,7 +234,7 @@ const itemsDataBase = [{
     description: "Boho Decor Plant Hanger For Home Wall Decoration Macrame Wall Hanging Shelf",
     price: 41,
     stock: 131,
-    category: "home-decoration",
+    category: "accesorios",
     thumbnail: "https://dummyjson.com/image/i/products/26/thumbnail.jpg",
 },
 {
@@ -231,7 +243,7 @@ const itemsDataBase = [{
     description: "Package Include 6 Birds with Adhesive Tape Shape: 3D Shaped Wooden Birds Material: Wooden MDF, Laminated 3.5mm",
     price: 51,
     stock: 17,
-    category: "home-decoration",
+    category: "accesorios",
     thumbnail: "https://dummyjson.com/image/i/products/27/thumbnail.webp",
 },
 {
@@ -240,7 +252,7 @@ const itemsDataBase = [{
     description: "3D led lamp sticker Wall sticker 3d wall art light on/off button  cell operated (included)",
     price: 20,
     stock: 54,
-    category: "home-decoration",
+    category: "accesorios",
     thumbnail: "https://dummyjson.com/image/i/products/28/thumbnail.jpg",
 },
 {
@@ -249,7 +261,7 @@ const itemsDataBase = [{
     description: "Handcraft Chinese style art luxury palace hotel villa mansion home decor ceramic vase with brass fruit plate",
     price: 60,
     stock: 7,
-    category: "home-decoration",
+    category: "accesorios",
     thumbnail: "https://dummyjson.com/image/i/products/29/thumbnail.webp",
 },
 {
@@ -258,7 +270,7 @@ const itemsDataBase = [{
     description: "Attractive DesignMetallic materialFour key hooksReliable & DurablePremium Quality",
     price: 30,
     stock: 54,
-    category: "home-decoration",
+    category: "accesorios",
     thumbnail: "https://dummyjson.com/image/i/products/30/thumbnail.jpg",
 },
 ];
@@ -267,7 +279,7 @@ export default function getItemsFromApi() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(itemsDataBase);
-        }, 2000);
+        }, 500);
     });
     }
 
@@ -286,6 +298,15 @@ export default function getItemsFromApi() {
                     reject (new Error ("El item no existe"))
                 };
                 
-            }, 2000);
+            }, 500);
         });
         }
+
+        export  function getItemsFromApiByCategory(categoryid) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                        let itemsRequested = itemsDataBase.filter(item => item.category === categoryid)
+                    resolve(itemsRequested);
+                }, 500);
+            });
+            }

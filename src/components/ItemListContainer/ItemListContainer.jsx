@@ -1,18 +1,33 @@
 import React, {useState, useEffect} from 'react'
 import ItemList from './ItemList'
-import getItemsFromApi from '../../mockService/mockService'
+import getItemsFromApi, { getItemsFromApiByCategory } from '../../mockService/mockService'
+import { useParams } from 'react-router-dom'
 
 function ItemListContainer() {
     let [productsList, setProductsList] = useState([])
 
+    const { categoryid } = useParams();
+    
+ 
     useEffect(
         ()=>{
-            getItemsFromApi().then(
+            if (categoryid){
+                getItemsFromApiByCategory(categoryid).then(
+                    (itemsDataBase) => {
+                        setProductsList(itemsDataBase);
+                    }        
+                )
+            
+            }
+            else {
+                getItemsFromApi().then(
                 (itemsDataBase) => {
                     setProductsList(itemsDataBase);
                 }        
             )
-        }, []
+            }
+            
+        }, [categoryid]
     )
 
     return (
