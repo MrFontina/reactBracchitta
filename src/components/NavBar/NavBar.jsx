@@ -8,15 +8,15 @@ function NavBar() {
   return (
     <nav className='NavBar'>
       
-        <Link to="/"><h3>Mi Tienda</h3></Link>
+        <Link to="/"><h1 className='logo'>Mi Tienda</h1></Link>
       
       <div className="nav-menu">
-        <Link to="/category/cuerdas">Instrumentos de Cuerda</Link>
-        <Link to="/category/teclados" >Teclados</Link>
-        <Link to="/category/baterias" >Baterias</Link>
-        <Link to="/category/amplificacion" >Amplificación</Link>
-        <Link to="/category/efectos" >Efectos</Link>
-        <Link to="/category/accesorios" >Accesorios</Link>
+        <Link to="/category/cuerdas" className='link'>Instrumentos de Cuerda</Link>
+        <Link to="/category/teclados" className='link'>Teclados</Link>
+        <Link to="/category/baterias" className='link'>Baterias</Link>
+        <Link to="/category/amplificacion" className='link'>Amplificación</Link>
+        <Link to="/category/efectos" className='link'>Efectos</Link>
+        <Link to="/category/accesorios" className='link'>Accesorios</Link>
         <CartWidget />
       </div>
       

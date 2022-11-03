@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {getSingleItemFromApi} from '../../mockService/mockService'
 import { useParams } from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount'
+import "./itemDetail.css"
 
 
 function ItemDetailContainer() {
@@ -21,18 +22,23 @@ function ItemDetailContainer() {
     )
 
     return (
-        <div >
-        <div className='card-detail-img'>
+        
+       <div className='item-detail'>
+        <div className='item-detail-img'>
             <img src={product.thumbnail} alt="producto imagen" />
         </div>
-        <div className="card-detail">
+        <div className="item-detail-data">
             <h2>{product.title}</h2>
-            <p>{product.detail}</p>
+            <p>{product.description}</p>
             <h4>${product.price}</h4>
+           <ItemCount stock={product.stock} /> 
         </div>
-        <ItemCount stock={product.stock} />
+        
       
     </div>
+    
+        
+ 
     )
 }
 

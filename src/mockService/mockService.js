@@ -203,7 +203,7 @@ const itemsDataBase = [{
 },
 {
     id: 23,
-    title: "GONKULATOR",
+    title: "Gonkulator",
     description: "Pedal Ringmodulator. Ganancia, Distor, Nivel, Frecuencia, Ring, Entrada.",
     price: 14,
     stock: 26,
@@ -212,7 +212,7 @@ const itemsDataBase = [{
 },
 {
     id: 24,
-    title: "SPARK OVERDRIVE",
+    title: "Spark Overdrive",
     description: "Pedal de efecto | Spark Series Cubo | Overdrive Vintage tipo 80´s",
     price: 46,
     stock: 113,
@@ -221,7 +221,7 @@ const itemsDataBase = [{
 },
 {
     id: 25,
-    title: "THE WAHTER",
+    title: "The Wahter",
     description: "Pedal de efecto | Wah Series | Wah-Wah | Sonidos clasicos",
     price: 70,
     stock: 47,
