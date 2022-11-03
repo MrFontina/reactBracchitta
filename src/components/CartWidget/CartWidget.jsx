@@ -1,15 +1,12 @@
 import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingCart }  from "@fortawesome/free-solid-svg-icons";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import "./cartWidget.css";
 
-import * as iconList from "@fortawesome/free-solid-svg-icons";
 
 function CartWidget() {
-    
   return (
-    <button>Comprar
-    <FontAwesomeIcon icon={ faShoppingCart } /></button>
-    
+    <button className='cart-widget'><FontAwesomeIcon icon={faShoppingCart} /></button>
   )
 }
 

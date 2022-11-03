@@ -21,8 +21,8 @@ function ItemDetailContainer() {
     )
 
     return (
-        <div className='card'>
-        <div className='card-details'>
+        <div >
+        <div className='card-detail-img'>
             <img src={product.thumbnail} alt="producto imagen" />
         </div>
         <div className="card-detail">

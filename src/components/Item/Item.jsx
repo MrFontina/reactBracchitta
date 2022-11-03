@@ -17,19 +17,20 @@ function Item(product) {
   let urlDetail = `/detalle/${product.id}`
 
   return (
-    <div className='card'>
-        <button onClick={handleFavorite} className={classButtonFavorite}>♥</button>
-        <div className='card-details'>
-            <img src={product.img} alt="producto imagen" />
-        </div>
+    <div className='card'>     
+        
         <div className="card-detail">
             <h2>{product.title}</h2>
-            <p>{product.detail}</p>
+            <div className='card-details'>
+            <img src={product.img} alt="producto imagen" />
+        </div>
+            {/* <p>{product.detail}</p> */}
             <h4>${product.price}</h4>
         </div>
-        <Link to={urlDetail}><Button1>Ver más!</Button1>
+        
+       <button onClick={handleFavorite} className={classButtonFavorite}>♥</button><br /><br />
+       <Link to={urlDetail}><Button1>Ver más!</Button1>
         </Link>
-      
     </div>
   )
 }

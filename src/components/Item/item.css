@@ -1,9 +1,31 @@
 .card{
+    margin: 7px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     height: 400px;
-    width: 300px;
+    width: 250px;
     cursor: pointer;
     }
 .card-details img{
-    width: 70%;
+    width: 60%;
     }
+
+.card-favicon{
+  
+  width: 32px;
+  height: 32px;
+  top: 0;
+  right: 0;
+  border-radius:  50%;
+  border: none; 
+  margin: 5px 15px;
+  padding: 8px 8px;
+  cursor: pointer;
+  background-color: rgb(219, 219, 219);
+  color: #8c8c8e;
+}
+
+.card-favicon.favorite{
+    background-color: rgb(223, 117, 84);
+    color: white;  
+    
+  }

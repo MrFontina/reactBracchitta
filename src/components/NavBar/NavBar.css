@@ -1,13 +1,27 @@
 .NavBar{
-    background-color: gray;
-}
-
-.NavBar ul{
-    list-style-type: none;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: green;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+        
 }
 
-.NavBar ul li{
-    padding: 6px;
+.NavBar h3{
+    color: black;
+    font-size: 25px;
+    
+}
+
+
+
+.nav-menu{
+    display: flex;
+    justify-content: space-around;
+    font-size: 17px;
+    text-decoration: none;
+    color: black;
 }
