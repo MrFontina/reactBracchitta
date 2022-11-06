@@ -29,7 +29,7 @@ function Item(product) {
         </div>
         
        <button onClick={handleFavorite} className={classButtonFavorite}>♥</button><br /><br />
-       <Link to={urlDetail}><Button1>Ver más!</Button1>
+       <Link to={urlDetail}><Button1 color="green">Ver más!</Button1>
         </Link>
     </div>
   )
