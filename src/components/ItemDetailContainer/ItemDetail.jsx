@@ -1,36 +1,47 @@
-import React, { useState } from 'react'
-import { useNavigate, Link } from 'react-router-dom';
+import React, { useState, useContext } from 'react'
+import { Link } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
+import cartContext from '../../Storage/CartContext';
 import ItemCount from '../ItemCount/ItemCount'
 import "./itemDetail.css"
 import Button1 from '../Button1/Button1';
-import Swal from 'sweetalert2';
+// import Swal from 'sweetalert2';
 
 
 
 function ItemDetail({ product }) {
 
+  
   const [isInCart, setIsInCart] = useState(false);
-  const navigate = useNavigate()
+  // const navigate = useNavigate();
+  const { addToCart } = useContext(cartContext)
 
   function onAddToCart(cantidad) {
-    Swal.fire({
-      title: 'Item agregado',
-      text: 'seguir comprando',
-      icon: 'success',
-      confirmButtonText: 'Cool'
-    }).then((result)=>
-    {
-      if (result.isConfirmed){
-        navigate("/cart");
-      }
-      });
+    const itemForCart = {
+      ...product,
+      cantidad
+    }
+    addToCart(itemForCart)
+
+
+    // Swal.fire({
+    //   title: 'Item agregado',
+    //   text: 'seguir comprando',
+    //   icon: 'success',
+    //   confirmButtonText: 'Cool'
+    // }).then((result)=>
+    // {
+    //   if (result.isConfirmed){
+    //     navigate("/cart");
+    //   }
+    //   });
 
 
     // alert(`Agregaste ${cantidad} unidades de ${product.title} al carrito`);
     setIsInCart(true);
   }
 
-  
+
 
   return (
     (
@@ -50,7 +61,7 @@ function ItemDetail({ product }) {
           ) :
             (<div>
               <Link to="/cart"><Button1>Ir al carrito</Button1> </Link>
-              <Button1 onClick={() => navigate(-1)}>Volver a atrás</Button1>
+              {/* <Button1 onClick={() => navigate(-1)}>Volver a atrás</Button1> */}
               <Button1></Button1>
             </div>)
 

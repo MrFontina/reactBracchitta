@@ -1,15 +1,15 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {CartContextProvider} from './Storage/CartContext';
 
 function App() {
   return (
     <div className="App">     
-             
-      <BrowserRouter>
+       <CartContextProvider>
+         <BrowserRouter>
       <NavBar /> 
       <Routes>
         <Route path="/" element= {<ItemListContainer/>}/>
@@ -18,6 +18,8 @@ function App() {
         <Route path="*" element={<h1>Error</h1>}/>
       </Routes>     
       </BrowserRouter>
+        </CartContextProvider>      
+     
     </div>
   );
 }
