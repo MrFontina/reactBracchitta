@@ -14,7 +14,7 @@ function ItemDetail({ product }) {
   
   const [isInCart, setIsInCart] = useState(false);
   // const navigate = useNavigate();
-  const { addToCart } = useContext(cartContext)
+  const { addToCart, clearCart } = useContext(cartContext)
 
   function onAddToCart(cantidad) {
     const itemForCart = {
@@ -23,6 +23,7 @@ function ItemDetail({ product }) {
     }
     addToCart(itemForCart)
 
+    
 
     // Swal.fire({
     //   title: 'Item agregado',
@@ -54,13 +55,19 @@ function ItemDetail({ product }) {
           <p>{product.description}</p>
           <h4>${product.price}</h4>
           {!isInCart ? (
+            
             <ItemCount
               onAddToCart={onAddToCart}
               stock={product.stock}
               text="Agregar al carrito" />
+              
+            
+            
+              
           ) :
             (<div>
               <Link to="/cart"><Button1>Ir al carrito</Button1> </Link>
+              <Button1 onClick={clearCart}>Vaciar carrito</Button1>
               {/* <Button1 onClick={() => navigate(-1)}>Volver a atrás</Button1> */}
               <Button1></Button1>
             </div>)
