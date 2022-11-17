@@ -46,6 +46,14 @@ export function CartContextProvider(props) {
     }
 
 
+    function totalPriceInCart(){
+        let totalPrice = 0;
+        cart.forEach(itemInCart =>{
+            totalPrice = (itemInCart.cantidad * itemInCart.price) + totalPrice
+        })
+        return totalPrice
+    }
+
     function removeItem(itemId){
         // cart.filter()
         console.log("removiendo el item", itemId)
@@ -64,6 +72,7 @@ export function CartContextProvider(props) {
         totalItemsInCart,
         removeItem,
         clearCart,
+        totalPriceInCart,
 
     };
 

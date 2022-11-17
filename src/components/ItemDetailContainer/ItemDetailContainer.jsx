@@ -8,7 +8,8 @@ import ItemDetail from './ItemDetail';
 
 
 function ItemDetailContainer() {
-    const [product, setProduct] = useState([])
+    const [product, setProduct] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     let params = useParams();
     let id = params.id;
@@ -20,8 +21,13 @@ function ItemDetailContainer() {
                     setProduct(itemsDataBase);
                 }        
             )
+            .catch((error)=>{
+                console.error(error);
+            })
+            .finally(() => setIsLoading(false))
         }, [id] 
-    )
+    );
+    if (isLoading) return <h3>Cargando</h3>
 
     return  <ItemDetail product={product}/>;
 }

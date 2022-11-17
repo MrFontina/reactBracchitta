@@ -26,6 +26,7 @@ function Item(product) {
         </div>
             {/* <p>{product.detail}</p> */}
             <h4>${product.price}</h4>
+            {product.discount ? <h4 className="offer">Descuento: {product.discount}%</h4> : <></>}
         </div>
         
        <button onClick={handleFavorite} className={classButtonFavorite}>♥</button><br /><br />
