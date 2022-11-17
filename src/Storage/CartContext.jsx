@@ -47,7 +47,8 @@ export function CartContextProvider(props) {
 
 
     function removeItem(itemId){
-        cart.filter()
+        // cart.filter()
+        console.log("removiendo el item", itemId)
     }
 
     function clearCart(){
