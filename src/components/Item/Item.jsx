@@ -16,6 +16,8 @@ function Item(product) {
 
   let urlDetail = `/detalle/${product.id}`
 
+  let stylePrice = { color: product.discount? 'green' : 'inherit' }
+
   return (
     <div className='card'>     
         
@@ -25,7 +27,7 @@ function Item(product) {
             <img src={product.img} alt="producto imagen" />
         </div>
             {/* <p>{product.detail}</p> */}
-            <h4>${product.price}</h4>
+            <h4 style={ stylePrice }>${product.price}</h4>
             {product.discount ? <h4 className="offer">Descuento: {product.discount}%</h4> : <></>}
         </div>
         

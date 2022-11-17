@@ -27,7 +27,7 @@ function CartView() {
               <h4>{product.cantidad}</h4>
               <h4>Precio a pagar: ${product.cantidad * product.price} </h4>
 
-              <Button1 onClick={() => removeItem(product.id)}>Eliminar producto</Button1>
+              <Button1 color="red" onClick={() => removeItem(product.id)}>Eliminar producto</Button1>
               {/* <img src={product.thumbnail} alt="" /> */}
             </div>
           )}

@@ -66,10 +66,10 @@ function ItemDetail({ product }) {
               
           ) :
             (<div>
-              <Link to="/cart"><Button1>Ir al carrito</Button1> </Link>
-              <Button1 onClick={clearCart}>Vaciar carrito</Button1>
+              <Link to="/cart"><Button1 color="green">Ir al carrito</Button1> </Link><br />
+              <Button1 color="yellow" onClick={clearCart}>Vaciar carrito</Button1><br />
               {/* <Button1 onClick={() => navigate(-1)}>Volver a atrás</Button1> */}
-              <Button1></Button1>
+              <Button1 color="red">Eliminar producto</Button1>
             </div>)
 
           }

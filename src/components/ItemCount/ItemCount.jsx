@@ -23,7 +23,7 @@ function ItemCount({ stock, onAddToCart, text }) {
             <button onClick={handleIncrement}>+</button>
             <button onClick={handleDecrement}>-</button>
             <p>{cantidad}</p>
-            <Button1 onClick={() => onAddToCart(cantidad)} color="red" >{text}</Button1>
+            <Button1 onClick={() => onAddToCart(cantidad)} color="green" >{text}</Button1>
            
         </div>
     )

@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {getSingleItemFromApi} from '../../mockService/mockService'
 import { useParams } from 'react-router-dom'
 import ItemDetail from './ItemDetail';
+import Loader from '../Loader/Loader';
 
 
 
@@ -27,7 +28,7 @@ function ItemDetailContainer() {
             .finally(() => setIsLoading(false))
         }, [id] 
     );
-    if (isLoading) return <h3>Cargando</h3>
+    if (isLoading) return <Loader color="red" size={100} speed={1}  />
 
     return  <ItemDetail product={product}/>;
 }

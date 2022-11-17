@@ -54,10 +54,19 @@ export function CartContextProvider(props) {
         return totalPrice
     }
 
-    function removeItem(itemId){
+    function removeItem(itemData){
         // cart.filter()
-        console.log("removiendo el item", itemId)
-    }
+        let itemFound = cart.filter(itemData.id)      
+        let newCart = cart.splice(itemFound) 
+        
+        
+        
+        
+        setCart(newCart)
+        
+         }
+
+
 
     function clearCart(){
         const newCart = [];

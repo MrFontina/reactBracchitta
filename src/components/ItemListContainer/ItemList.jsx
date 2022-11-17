@@ -1,12 +1,13 @@
 import React from 'react'
 import FlexContainer from "../FlexContainer/FlexContainer"
 import Item from "../Item/Item"
+import Loader from '../Loader/Loader';
 
 function ItemList(props) {
   let emptyArray = props.productsList.length === 0;
   return (
      <FlexContainer>
-      {emptyArray ? (<h3>Cargando</h3>) : (
+      {emptyArray ? (<Loader color="red" size={100} speed={1} />) : (
 
         props.productsList.map((product) => (
         <Item
