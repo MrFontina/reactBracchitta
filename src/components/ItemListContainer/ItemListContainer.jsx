@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import ItemList from './ItemList'
-import { getItemsFromApiByCategory } from '../../mockService/mockService'
-import { getItemsFromApi } from '../../services/firebase'
+
+import { getItemsFromApi, getItemsFromApiByCategory } from '../../services/firebase'
 import { useParams } from 'react-router-dom'
 
 function ItemListContainer() {

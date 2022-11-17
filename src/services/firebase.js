@@ -6,7 +6,9 @@ import {
     getFirestore,
     getDocs,
     doc,
-    getDoc
+    getDoc,
+    query,
+    where
 } from "firebase/firestore"
 
 const firebaseConfig = {
@@ -61,5 +63,18 @@ export async function getSingleItemFromApi(id) {
     } else {
         console.error("El producto no existe")
     }
+}
 
+export async function getItemsFromApiByCategory(categoryid){
+    const q = query(collection(DB, "productos"), where("category", "==", categoryid));
+    const productsSnap = await getDocs(q);
+
+    const productos = productsSnap.docs.map(
+        docu => {
+            return {
+
+                ...docu.data(),
+                id: docu.id,
+            }})
+            return (productos)
 }
