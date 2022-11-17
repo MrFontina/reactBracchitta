@@ -5,9 +5,11 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {CartContextProvider} from './Storage/CartContext';
 import CartView from './components/CartView/CartView';
+import { getItemsFromApi } from './services/firebase';
 
 function App() {
-  return (
+  getItemsFromApi()  
+  return (   
     <div className="App">     
        <CartContextProvider>
          <BrowserRouter>
@@ -21,7 +23,6 @@ function App() {
       </Routes>     
       </BrowserRouter>
         </CartContextProvider>      
-     
     </div>
   );
 }
