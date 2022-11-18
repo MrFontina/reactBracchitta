@@ -5,10 +5,11 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {CartContextProvider} from './Storage/CartContext';
 import CartView from './components/CartView/CartView';
-import { getItemsFromApi } from './services/firebase';
+// import { exportItemsToFirestore } from './services/firebase';
+
 
 function App() {
-  getItemsFromApi()  
+   
   return (   
     <div className="App">     
        <CartContextProvider>
@@ -19,10 +20,12 @@ function App() {
         <Route path="/category/:categoryid" element= {<ItemListContainer/>}/>
         <Route path="/detalle/:id" element= {<ItemDetailContainer />}/>
         <Route path="/cart" element= {<CartView />}/>
+        <Route path="/checkout/:orderId" element= {<h1>Gracias por tu compra!</h1>}/>
         <Route path="*" element={<h1>Error</h1>}/>
       </Routes>     
       </BrowserRouter>
-        </CartContextProvider>      
+        </CartContextProvider>    
+        {/* <button onClick={exportItemsToFirestore}>Exportar items</button>   */}
     </div>
   );
 }
