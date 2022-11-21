@@ -55,13 +55,7 @@ export function CartContextProvider(props) {
     }
 
     function removeItem(itemData){
-        // cart.filter()
-        let itemFound = cart.filter(itemData.id)      
-        let newCart = cart.splice(itemFound) 
-        
-        
-        
-        
+        const newCart = cart.filter(item => item.id !== itemData)      
         setCart(newCart)
         
          }

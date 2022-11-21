@@ -14,7 +14,7 @@ function ItemDetail({ product }) {
   
   const [isInCart, setIsInCart] = useState(false);
   // const navigate = useNavigate();
-  const { addToCart, clearCart } = useContext(cartContext)
+  const { addToCart, clearCart, removeItem } = useContext(cartContext)
 
   function onAddToCart(cantidad) {
     const itemForCart = {
@@ -69,7 +69,7 @@ function ItemDetail({ product }) {
               <Link to="/cart"><Button1 color="green">Ir al carrito</Button1> </Link><br />
               <Button1 color="yellow" onClick={clearCart}>Vaciar carrito</Button1><br />
               {/* <Button1 onClick={() => navigate(-1)}>Volver a atrás</Button1> */}
-              <Button1 color="red">Eliminar producto</Button1>
+              <Button1 onClick={() => removeItem(product.id)} color="red">Eliminar producto</Button1>
             </div>)
 
           }
