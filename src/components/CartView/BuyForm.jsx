@@ -6,8 +6,8 @@ import React from 'react'
 function BuyForm(props) {
     const [userData, setUserData] = useState({
         nombre: "",
-        telefono: "",
         email: "",
+        telefono: "",
         direccion: "",
     });
 
@@ -32,7 +32,7 @@ function BuyForm(props) {
        <InputForm
         required
         title="Nombre"
-        name="name"
+        name="nombre"
         value={userData.name}
         onInputChange={onInputChange}
       />
@@ -46,10 +46,19 @@ function BuyForm(props) {
       <InputForm
         required
         title="Teléfono"
-        name="phone"
+        name="telefono"
         value={userData.phone}
         onInputChange={onInputChange}
       />
+      <InputForm
+        required
+        title="Dirección"
+        name="direccion"
+        value={userData.phone}
+        onInputChange={onInputChange}
+      />
+
+<button style={{ backgroundColor: "green" }} onClick={onSubmit}>Crear orden</button>
     </form>
     
   )

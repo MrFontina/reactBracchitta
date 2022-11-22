@@ -4,7 +4,7 @@ function InputForm(props){
       <div style={{ display: "flex", marginBottom: 8 }}>
           <label style={{  width: "100px",marginRight: 4 }}>{props.title}</label>
           <input 
-            required={props.required} 
+            required={true} 
             value={props.value} 
             name={props.name} 
             type="text" 
