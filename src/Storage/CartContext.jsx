@@ -7,7 +7,12 @@ const cartContext = createContext();
 export function CartContextProvider(props) {
 
     const [cart, setCart] = useState([]);
+    const [orderId, setOrderId] = useState("")
 
+    function buyOrderId(buyId){
+        const newId = buyId;
+        setOrderId(newId)
+    }
 
     function addToCart(itemData) {
         let itemFound = cart.find(itemInCart => itemInCart.id === itemData.id)
@@ -68,6 +73,7 @@ export function CartContextProvider(props) {
         
     }
 
+ 
 
     const value = {
         cart,
@@ -76,6 +82,8 @@ export function CartContextProvider(props) {
         removeItem,
         clearCart,
         totalPriceInCart,
+        buyOrderId,
+        orderId
 
     };
 

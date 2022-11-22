@@ -7,7 +7,7 @@ import Swal from 'sweetalert2'
 import { useNavigate } from 'react-router-dom'
 
 function CartView() {
-  const { cart, clearCart, removeItem, totalPriceInCart } = useContext(cartContext);
+  const { cart, clearCart, removeItem, totalPriceInCart, buyOrderId } = useContext(cartContext);
   const navigate = useNavigate();
 
  
@@ -28,7 +28,6 @@ function CartView() {
         date: new Date()
       }
       createBuyOrderFirestore(buyData).then(orderId =>{
-        console.log(orderId)
         clearCart()
         Swal.fire({
           title: `Gracias por tu compra!`,
@@ -37,6 +36,7 @@ function CartView() {
            
         })
         navigate(`/checkout/${orderId}`)
+        buyOrderId(orderId)
       })
       
     }

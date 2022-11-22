@@ -6,7 +6,7 @@ function EmptyCart() {
   return (
     <div>
         <h1>El carrito está vacío</h1>
-        <Link to="/"><Button1>Volver a la tienda</Button1></Link>
+        <Link to="/"><Button1 color="lightblue">Volver a la tienda</Button1></Link>
             
 
     </div>

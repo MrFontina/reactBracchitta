@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react'
 import { Link } from 'react-router-dom';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import cartContext from '../../Storage/CartContext';
 import ItemCount from '../ItemCount/ItemCount'
 import "./itemDetail.css"
@@ -13,7 +13,7 @@ function ItemDetail({ product }) {
 
   
   const [isInCart, setIsInCart] = useState(false);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const { addToCart, clearCart, removeItem } = useContext(cartContext)
 
   function onAddToCart(cantidad) {
@@ -68,7 +68,7 @@ function ItemDetail({ product }) {
             (<div>
               <Link to="/cart"><Button1 color="green">Ir al carrito</Button1> </Link><br />
               <Button1 color="yellow" onClick={clearCart}>Vaciar carrito</Button1><br />
-              {/* <Button1 onClick={() => navigate(-1)}>Volver a atrás</Button1> */}
+              <Button1 color="lightblue" onClick={() => navigate(-1)}>Volver a atrás</Button1><br />
               <Button1 onClick={() => removeItem(product.id)} color="red">Eliminar producto</Button1>
             </div>)
 
