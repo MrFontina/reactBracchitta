@@ -4,9 +4,9 @@ El objetivo fue realizar un eCommerce donde el usuario pueda navegar a través d
 
 Esta aplicacion se focaliza en la funcionalidad y no en los estilos.
 
-Se utilizaron las siguientes librerias: fortawesome, uiball, firebase y sweetalert.
+Se utilizaron las siguientes librerias: fortawesome, uiball, firebase, sweetalert y react-router-dom.
 
-Para inicializar el repositorio usar los comandos ### `npm install` y luego ### `npm start`
+Para inicializar el repositorio usar los comandos ### `npm install` y luego ### `npm start`.
 
 
 
