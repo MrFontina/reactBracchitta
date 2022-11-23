@@ -8,7 +8,7 @@ function NavBar() {
   return (
     <nav className='NavBar'>
       
-        <Link to="/"><h1 className='logo'>Mi Tienda</h1></Link>
+        <Link to="/"><h1 className='logo'>Music Store</h1></Link>
       
       <div className="nav-menu">
         <Link to="/category/cuerdas" className='link'>Instrumentos de Cuerda</Link>

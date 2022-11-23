@@ -4,6 +4,7 @@
     height: 450px;
     width: 250px;
     cursor: pointer;
+    background-color: whitesmoke;
     }
 .card-details img{
     height: 150px;

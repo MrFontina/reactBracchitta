@@ -29,7 +29,7 @@ function ItemDetail({ product }) {
       title: '',
       text: (`Agregaste ${cantidad} unidades de ${product.title} al carrito`),
       icon: 'success',
-      confirmButtonText: 'Cool'
+      confirmButtonText: 'Ok!'
     })  
     setIsInCart(true);
   }

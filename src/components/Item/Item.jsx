@@ -29,7 +29,7 @@ function Item(product) {
             {product.discount ? <h4 className="offer">Descuento: {product.discount}%</h4> : <></>}
         </div>        
        <button onClick={handleFavorite} className={classButtonFavorite}>♥</button><br /><br />
-       <Link to={urlDetail}><Button1 color="green">Ver más!</Button1></Link>       
+       <Link to={urlDetail}><Button1 width="120px" weight="bold" size="15px" color="green">Ver más!</Button1></Link>       
     </div>
   )
 }
