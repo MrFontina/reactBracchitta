@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {getSingleItemFromApi} from '../../services/firebase'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import ItemDetail from './ItemDetail';
 import Loader from '../Loader/Loader';
 
@@ -12,6 +12,7 @@ import Loader from '../Loader/Loader';
 function ItemDetailContainer() {
     const [product, setProduct] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const navigate = useNavigate();
 
     let params = useParams();
     let id = params.id;
@@ -25,9 +26,10 @@ function ItemDetailContainer() {
             )
             .catch((error)=>{
                 console.error(error);
+                navigate("/notfound")
                 })
             .finally(() => setIsLoading(false))
-        }, [id] 
+        }, [id, navigate] 
     );
     if (isLoading) return <Loader color="red" size={100} speed={1}  />
 
