@@ -10,7 +10,7 @@ Para inicializar el repositorio usar los comandos ### `npm install` y luego ### 
 
 
 
-![]("./musicstore.gif")
+![]("../musicstore.gif")
 
 
 
