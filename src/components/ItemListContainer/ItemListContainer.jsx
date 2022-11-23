@@ -16,23 +16,20 @@ function ItemListContainer() {
                 getItemsFromApiByCategory(categoryid).then(
                     (itemsDataBase) => {
                         setProductsList(itemsDataBase);
-                    }        
-                )
-            
+                    })            
             }
+
             else {
                 getItemsFromApi().then(
                 (itemsDataBase) => {
                     setProductsList(itemsDataBase);
-                }        
-            )
+                })
             }
             
-        }, [categoryid]
+        }, 
+        [categoryid]
     )
-
-    return  <ItemList productsList={productsList} />
-       
+    return  <ItemList productsList={productsList}/>       
 }
 
 export default ItemListContainer

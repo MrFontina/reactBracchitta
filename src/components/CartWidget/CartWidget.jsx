@@ -14,7 +14,7 @@ function CartWidget() {
   return <div>
     <Link to="/cart"><button className='cart-widget'><FontAwesomeIcon icon={faShoppingCart} /></button></Link>
     
-    {totalItemsInCart() > 0 ? <small>{totalItemsInCart()} </small>:
+    {totalItemsInCart() > 0 ? <small className='counter'> {totalItemsInCart()} </small>:
     <></>}
     
     

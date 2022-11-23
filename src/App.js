@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {CartContextProvider} from './Storage/CartContext';
 import CartView from './components/CartView/CartView';
 import OrderId from './components/CartView/OrderId';
+// import IdError from './components/IdError/IdError';
 // import { exportItemsToFirestore } from './services/firebase';
 
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/cart" element= {<CartView />}/>
         <Route path="/checkout/:orderId" element= {<OrderId/>}/>
         <Route path="*" element={<h1>Error</h1>}/>
+        {/* <Route path="/notfound" elemnt={<IdError/>} /> */}
       </Routes>     
       </BrowserRouter>
         </CartContextProvider>    

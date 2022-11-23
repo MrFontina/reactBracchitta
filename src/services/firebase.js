@@ -1,6 +1,4 @@
-import {
-    initializeApp
-} from "firebase/app";
+import { initializeApp } from "firebase/app";
 import {
     collection,
     getFirestore,
@@ -11,6 +9,8 @@ import {
     where,
     addDoc
 } from "firebase/firestore"
+
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyA0xWc9DjYYs9Ut_sP0csFZgNt4emsmS4o",
@@ -35,15 +35,12 @@ export async function getItemsFromApi() {
     try {
         const collectionProductos = collection(DB, "productos")
         let respuesta = await getDocs(collectionProductos)
-
         const productos = respuesta.docs.map(
             docu => {
                 return {
-
                     ...docu.data(),
                     id: docu.id,
                 }
-
             })
         return (productos)
     } catch (error) {
@@ -52,28 +49,31 @@ export async function getItemsFromApi() {
 }
 
 export async function getSingleItemFromApi(id) {
-    const docRef = doc(DB, "productos", id)
-    const docSnap = await getDoc(docRef)
+    try{
+        const docRef = doc(DB, "productos", id)
+        const docSnap = await getDoc(docRef)
 
     if (docSnap.exists()) {
-
         return {
             ...docSnap.data(),
             id: docSnap.id,
         }
     } else {
-        console.error("El producto no existe")
+        throw new Error("El producto no existe");       
+        }
     }
+    catch(error){
+        throw error;
+    }
+    
 }
 
 export async function getItemsFromApiByCategory(categoryid){
     const q = query(collection(DB, "productos"), where("category", "==", categoryid));
     const productsSnap = await getDocs(q);
-
     const productos = productsSnap.docs.map(
         docu => {
             return {
-
                 ...docu.data(),
                 id: docu.id,
             }})

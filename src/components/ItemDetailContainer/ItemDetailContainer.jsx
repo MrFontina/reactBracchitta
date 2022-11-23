@@ -8,6 +8,7 @@ import Loader from '../Loader/Loader';
 
 
 
+
 function ItemDetailContainer() {
     const [product, setProduct] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -24,7 +25,7 @@ function ItemDetailContainer() {
             )
             .catch((error)=>{
                 console.error(error);
-            })
+                })
             .finally(() => setIsLoading(false))
         }, [id] 
     );

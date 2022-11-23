@@ -19,21 +19,17 @@ function Item(product) {
   let stylePrice = { color: product.discount? 'green' : 'inherit' }
 
   return (
-    <div className='card'>     
-        
-        <div className="card-detail">
+    <div className='card'>             
+        <div>
             <h2>{product.title}</h2>
             <div className='card-details'>
-            <img src={product.img} alt="producto imagen" />
+            <Link to={urlDetail}><img src={product.img} alt="producto imagen"/></Link>
         </div>
-            {/* <p>{product.detail}</p> */}
             <h4 style={ stylePrice }>${product.price}</h4>
             {product.discount ? <h4 className="offer">Descuento: {product.discount}%</h4> : <></>}
-        </div>
-        
+        </div>        
        <button onClick={handleFavorite} className={classButtonFavorite}>♥</button><br /><br />
-       <Link to={urlDetail}><Button1 color="green">Ver más!</Button1>
-        </Link>
+       <Link to={urlDetail}><Button1 color="green">Ver más!</Button1></Link>       
     </div>
   )
 }

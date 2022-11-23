@@ -3,16 +3,11 @@ import { createContext, useState } from "react";
 const cartContext = createContext();
 
 
-
 export function CartContextProvider(props) {
 
     const [cart, setCart] = useState([]);
     const [orderId, setOrderId] = useState("")
 
-    function buyOrderId(buyId){
-        const newId = buyId;
-        setOrderId(newId)
-    }
 
     function addToCart(itemData) {
         let itemFound = cart.find(itemInCart => itemInCart.id === itemData.id)
@@ -28,19 +23,12 @@ export function CartContextProvider(props) {
                 }
             })
             setCart(newCart)
-
         }
         else {
             const newCart = [...cart];
             newCart.push(itemData);
             setCart(newCart);
-        }
-
-
-
-
-
-    }
+        }}
 
     function totalItemsInCart() {
         let total = 0;
@@ -51,29 +39,32 @@ export function CartContextProvider(props) {
     }
 
 
-    function totalPriceInCart(){
+    function totalPriceInCart() {
         let totalPrice = 0;
-        cart.forEach(itemInCart =>{
+        cart.forEach(itemInCart => {
             totalPrice = (itemInCart.cantidad * itemInCart.price) + totalPrice
         })
         return totalPrice
     }
 
-    function removeItem(itemData){
-        const newCart = cart.filter(item => item.id !== itemData)      
+    function removeItem(itemData) {
+        const newCart = cart.filter(item => item.id !== itemData)
         setCart(newCart)
-        
-         }
-
-
-
-    function clearCart(){
-        const newCart = [];
-        setCart(newCart)
-        
     }
 
- 
+
+
+    function clearCart() {
+        const newCart = [];
+        setCart(newCart)
+    }
+
+
+    function buyOrderId(buyId) {
+        const newId = buyId;
+        setOrderId(newId)
+    }
+
 
     const value = {
         cart,
@@ -84,12 +75,10 @@ export function CartContextProvider(props) {
         totalPriceInCart,
         buyOrderId,
         orderId
-
     };
 
     return (
         <cartContext.Provider value={value}>{props.children} </cartContext.Provider>
-
     )
 }
 

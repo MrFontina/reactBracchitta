@@ -5,7 +5,7 @@ import cartContext from '../../Storage/CartContext';
 import ItemCount from '../ItemCount/ItemCount'
 import "./itemDetail.css"
 import Button1 from '../Button1/Button1';
-// import Swal from 'sweetalert2';
+import Swal from 'sweetalert2';
 
 
 
@@ -14,7 +14,7 @@ function ItemDetail({ product }) {
   
   const [isInCart, setIsInCart] = useState(false);
   const navigate = useNavigate();
-  const { addToCart, clearCart, removeItem } = useContext(cartContext)
+  const { addToCart, removeItem } = useContext(cartContext)
 
   function onAddToCart(cantidad) {
     const itemForCart = {
@@ -25,20 +25,12 @@ function ItemDetail({ product }) {
 
     
 
-    // Swal.fire({
-    //   title: 'Item agregado',
-    //   text: 'seguir comprando',
-    //   icon: 'success',
-    //   confirmButtonText: 'Cool'
-    // }).then((result)=>
-    // {
-    //   if (result.isConfirmed){
-    //     navigate("/cart");
-    //   }
-    //   });
-
-
-    // alert(`Agregaste ${cantidad} unidades de ${product.title} al carrito`);
+    Swal.fire({
+      title: '',
+      text: (`Agregaste ${cantidad} unidades de ${product.title} al carrito`),
+      icon: 'success',
+      confirmButtonText: 'Cool'
+    })  
     setIsInCart(true);
   }
 
@@ -54,22 +46,17 @@ function ItemDetail({ product }) {
           <h2>{product.title}</h2>
           <p>{product.description}</p>
           <h4>${product.price}</h4>
-          {!isInCart ? (
-            
+          {!isInCart ? (            
             <ItemCount
               onAddToCart={onAddToCart}
               stock={product.stock}
-              text="Agregar al carrito" />
-              
-            
-            
-              
+              text="Agregar al carrito" />               
           ) :
-            (<div>
-              <Link to="/cart"><Button1 color="green">Ir al carrito</Button1> </Link><br />
-              <Button1 color="yellow" onClick={clearCart}>Vaciar carrito</Button1><br />
-              <Button1 color="lightblue" onClick={() => navigate(-1)}>Volver a atrás</Button1><br />
-              <Button1 onClick={() => removeItem(product.id)} color="red">Eliminar producto</Button1>
+
+            (<div className='containerBotones'>
+              <Link to="/cart"><Button1 width="100px" color="green">Ir al carrito</Button1> </Link><br />
+              <Button1  onClick={() => {removeItem(product.id); setIsInCart(false)}} color="red">Eliminar producto</Button1><br/>
+              <Button1  color="lightblue" onClick={() => navigate(-1)}>Seguir comprando</Button1><br />              
             </div>)
 
           }
