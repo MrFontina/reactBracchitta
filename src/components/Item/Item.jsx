@@ -20,7 +20,7 @@ function Item(product) {
 
   return (
     <div className='card'>             
-        <div>
+        <div className="cardTop">
             <h2>{product.title}</h2>
             <div className='card-details'>
             <Link to={urlDetail}><img src={product.img} alt="producto imagen"/></Link>
@@ -29,7 +29,7 @@ function Item(product) {
             {product.discount ? <h4 className="offer">Descuento: {product.discount}%</h4> : <></>}
         </div>        
        <button onClick={handleFavorite} className={classButtonFavorite}>♥</button><br /><br />
-       <Link to={urlDetail}><Button1 width="120px" weight="bold" size="15px" color="green">Ver más!</Button1></Link>       
+       <Link to={urlDetail}><Button1 className="btnVer" width="120px" weight="bold" size="15px" color="green">Ver más!</Button1></Link>       
     </div>
   )
 }

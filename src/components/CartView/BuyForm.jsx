@@ -22,10 +22,13 @@ function BuyForm(props) {
         setUserData(newUserData)
     }
 
+    
     function onSubmit(evt){
         evt.preventDefault();
         props.onSubmit(userData);
     }
+
+   
 
   return (
     <form onSubmit={onSubmit}>

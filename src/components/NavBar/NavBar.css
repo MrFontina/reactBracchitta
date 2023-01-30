@@ -1,35 +1,26 @@
-.NavBar{
+.navBar{
+    background-color: #1b1b1b;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    background-color: grey;
-    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 100px;
     height: 100px;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-        
+   margin-bottom: 70px;
+}
+
+.navBar h1{
+    color: white;
+}
+
+.navRight{
+display: flex;
+align-items: center;
 }
 
 
 
-
-
-.nav-menu{
-    display: flex;
-    justify-content: space-around;
-    font-size: 17px;
-    text-decoration: none;
-    color: black;
-}
-
-.logo{
-    color: black;
-    text-decoration: none;
-    
-}
-
-.link{
+ .link{
     color: black;
     text-decoration: none;
 }
@@ -38,9 +29,76 @@ a{
     text-decoration: none;
    
   }
+
   
-  
-  a:hover{
-    font-weight: 600;
-    color:rgb(19, 19, 17)
+
+
+  /* .dropdown {
+    float: left; 
+    overflow: hidden;    
+  } */
+
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding-right: 70px;
+   
+    background-color: inherit;
+    font-family: inherit; 
+    margin: 0; 
   }
+
+  .dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  
+  .dropdownContent a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  
+  .dropdownContent a:hover {
+    background-color: #ddd;
+  }
+  
+  
+  .dropdown:hover .dropdownContent {
+    display: block;
+  }
+
+  @media (max-width: 660px){
+    .navBar{
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        margin-bottom: 50px;
+    }
+    .navRight{
+      justify-content: start;
+      padding-bottom: 40px;
+      
+    }
+    .dropdown .dropbtn{
+        padding-right: 300px;
+    }
+    
+  }
+
+@media (max-width: 400px){
+    .dropdown .dropbtn{
+        padding-right: 100px;
+    }
+}

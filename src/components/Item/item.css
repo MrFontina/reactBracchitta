@@ -1,4 +1,10 @@
 .card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 30px;
+  position: relative;
     margin: 7px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     height: 450px;
@@ -6,16 +12,23 @@
     cursor: pointer;
     background-color: whitesmoke;
     }
+
+.cardTop{
+  margin-top: 30px;
+}
+   
+    
 .card-details img{
     height: 150px;
     }
 
 .card-favicon{
-  
+  position: absolute;
   width: 32px;
   height: 32px;
-  top: 0;
-  right: 0;
+  top: 15px;
+  right: 20px;
+  
   border-radius:  50%;
   border: none; 
   margin: 5px 15px;
@@ -31,3 +44,7 @@
     
   }
 
+  .btnVer{
+    position: absolute;
+    top: 10px;
+  }
