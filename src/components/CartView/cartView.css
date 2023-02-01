@@ -1,12 +1,26 @@
+.cartViewAll{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 70px;
+}
+
+@media (max-width: 700px){
+    .cartViewAll{
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: 30px;
+    }
+}
+
+
 .cartView {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     flex-wrap: wrap;
-    
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    
-    
+    width: 50%;
+    margin-left: 20px;    
 }
 
 .cartView img{
@@ -14,10 +28,65 @@
     
 }
 
+.cartItem{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    
+    margin: 5px;
+    padding: 7px;
+}
+
+@media (max-width: 570px){
+    .cartView {
+        margin-left: 0px;
+        width: 100%;
+        
+        
+    }
+    .cartItem{
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 400px;
+       
+        align-self: center;
+       
+    }
+    .cartRight{
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 570px){
+    .cartItem{
+        flex-direction: column;
+        width: 80%;
+    }
+}
+
+.cartLeft{
+    width: 50%;
+    
+}
+.cartRight{
+    width: 50%;
+    
+    padding-bottom: 10px;
+}
+
 .form {
+    padding-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     
+    width: 50%;
+    
 }
+
+.form button{
+    margin-top: 10px;
+}
+
 

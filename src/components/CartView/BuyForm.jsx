@@ -1,5 +1,6 @@
 import InputForm from "./InputForm";
 import { useState } from "react";
+import Button1 from "../Button1/Button1";
 
 import React from 'react'
 
@@ -61,7 +62,9 @@ function BuyForm(props) {
         onInputChange={onInputChange}
       />
 
-<button style={{ backgroundColor: "green" }} onClick={onSubmit}>Crear orden</button>
+<Button1 onClick={onSubmit} 
+  width="100px" weight="bold"  size="14px" color="MediumAquaMarine"
+>Crear orden</Button1>
     </form>
     
   )
