@@ -63,7 +63,7 @@ function BuyForm(props) {
       />
 
 <Button1 onClick={onSubmit} 
-  width="100px" weight="bold"  size="14px" color="MediumAquaMarine"
+  width="120px" weight="bold"  size="14px" color="MediumAquaMarine"
 >Crear orden</Button1>
     </form>
     

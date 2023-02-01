@@ -66,7 +66,7 @@ function CartView() {
           <div className='form'>
             <h3>Precio total: ${totalPriceInCart()}</h3>
             <BuyForm onSubmit={createBuyOrder} /> <br />
-            <Button1 width="100px" weight="bold"  size="14px" color="yellow"  onClick={clearCart}>Vaciar carrito</Button1><br />
+            <Button1 width="120px" weight="bold"  size="14px" color="yellow"  onClick={clearCart}>Vaciar carrito</Button1><br />
           </div>
         </div>
 
