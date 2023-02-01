@@ -54,9 +54,9 @@ function ItemDetail({ product }) {
           ) :
 
             (<div className='containerBotones'>
-              <Link to="/cart"><Button1 width="100px" color="green">Ir al carrito</Button1> </Link><br />
+              <Link to="/cart"><Button1   color="green">Ir al carrito</Button1> </Link><br />
               <Button1  onClick={() => {removeItem(product.id); setIsInCart(false)}} color="red">Eliminar producto</Button1><br/>
-              <Button1  color="lightblue" onClick={() => navigate(-1)}>Seguir comprando</Button1><br />              
+              <Button1  color="lightblue"  onClick={() => navigate(-1)}>Seguir comprando</Button1><br />              
             </div>)
 
           }
