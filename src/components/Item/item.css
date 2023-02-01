@@ -4,9 +4,12 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     height: 450px;
     width: 250px;
-    cursor: pointer;
-    
+    cursor: pointer;    
     }
+
+.card:hover{
+  box-shadow: 5px 5px 5px 5px grey;
+}
 
 .cardContent{
   display: flex;
@@ -60,11 +63,7 @@
 
 .card-favicon.favorite{
     background-color: rgb(223, 117, 84);
-    color: white;  
-    
+    color: white;          
   }
 
-  /* .btnVer{
-    position: absolute;
-    top: 10px;
-  } */
+ 

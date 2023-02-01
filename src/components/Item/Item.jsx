@@ -31,7 +31,7 @@ function Item(product) {
         <div className="cardBottom">
           {product.discount ? <h4 className="offer">Descuento: {product.discount}%</h4> : <></>}
         <button onClick={handleFavorite} className={classButtonFavorite}>♥</button><br /><br />
-        <Link to={urlDetail}><Button1 className="btnVer" width="120px" weight="bold" size="15px" color="green">Ver más!</Button1></Link>
+        <Link to={urlDetail}><Button1 className="btnVer" width="100px" weight="bold"  size="14px" color="MediumAquaMarine">VER MÁS</Button1></Link>
         </div>
         
       </div>

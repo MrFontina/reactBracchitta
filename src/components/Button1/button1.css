@@ -1,5 +1,10 @@
 .button1{
-    border: black solid 1px;
+    border: none;
     height: 30px;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.button1:hover{
+    transform: scale(1.1)
 }
