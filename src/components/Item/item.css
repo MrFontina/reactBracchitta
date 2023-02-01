@@ -1,20 +1,40 @@
 .card{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  margin-bottom: 25px;
   padding-bottom: 30px;
-  position: relative;
-    margin: 7px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     height: 450px;
     width: 250px;
     cursor: pointer;
-    background-color: whitesmoke;
+    
     }
+
+.cardContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;  
+  position: relative;
+  margin: 7px;
+  
+  height: 440px;
+  width: 220px;
+}
 
 .cardTop{
   margin-top: 30px;
+  
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.cardBottom{
+  
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+ 
 }
    
     
@@ -26,8 +46,8 @@
   position: absolute;
   width: 32px;
   height: 32px;
-  top: 15px;
-  right: 20px;
+  top: 9px;
+  right: -10px;
   
   border-radius:  50%;
   border: none; 
@@ -44,7 +64,7 @@
     
   }
 
-  .btnVer{
+  /* .btnVer{
     position: absolute;
     top: 10px;
-  }
+  } */
