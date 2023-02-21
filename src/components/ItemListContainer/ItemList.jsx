@@ -7,7 +7,7 @@ function ItemList(props) {
   let emptyArray = props.productsList.length === 0;
   return (
      <FlexContainer>
-      {emptyArray ? (<Loader color="red" size={100} speed={1} />) : (
+      {emptyArray ? (<Loader color="grey" size={100} speed={1} />) : (
 
         props.productsList.map((product) => (
         <Item

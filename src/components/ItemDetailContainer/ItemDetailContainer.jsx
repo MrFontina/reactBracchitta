@@ -31,7 +31,7 @@ function ItemDetailContainer() {
             .finally(() => setIsLoading(false))
         }, [id, navigate] 
     );
-    if (isLoading) return <Loader color="red" size={100} speed={1}  />
+    if (isLoading) return <Loader color="grey" size={100} speed={1} />
 
     return  <ItemDetail product={product}/>;
 }
